@@ -18,16 +18,25 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
+  height: auto;
+  color: black;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* scrollbar */
+
+body::-webkit-scrollbar {
+  height: 5px;
+  width: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ffb266;
+  border-radius: 5px;
 }
