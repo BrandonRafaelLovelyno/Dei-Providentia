@@ -1,8 +1,11 @@
 import Carousel from "@/components/carousel";
+import TitleSection from "@/components/home/title-section";
+import ViewAlumni from "@/components/home/view-alumni";
 import { twMerge } from "tailwind-merge";
 
-interface Testimonial {
+export interface Testimonial {
   name: string;
+  prodi: string;
   quote: string;
   src: string;
 }
@@ -10,18 +13,29 @@ interface Testimonial {
 const TESTIMONIALS: Testimonial[] = [
   {
     name: "Nuresya Larasayu Octavia",
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    prodi: "S1 Akuntansi",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lotem ipsum dolor sit amet, consectetur adipiscing elit.",
+    src: "/home/background.jpg",
+  },
+  {
+    name: "Redempta Ronauli Sri Rukmini Napitupulu",
+    prodi: "S1 Ilmu Komunikasi",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lotem ipsum dolor sit amet, consectetur adipiscing elit.",
     src: "/home/background.jpg",
   },
 ];
 
 const SectionAlumni = () => {
   return (
-    <section className="w-full">
+    <section className={twMerge("w-full", "flex flex-col gap-y-5")}>
+      <TitleSection title="Alumni Kami" />
       <Carousel
         items={[
-          <div key={1} className="h-[200px] w-full bg-red-500" />,
-          <div key={2} className="h-[250px] w-full bg-blue-500" />,
+          ...TESTIMONIALS.map((testimonial, idx) => (
+            <ViewAlumni key={idx} testimonial={testimonial} />
+          )),
         ]}
       />
     </section>

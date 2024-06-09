@@ -12,7 +12,7 @@ const HomePage = () => {
       <HeaderImage />
       <main
         className={twMerge(
-          "w-full h-fit",
+          "w-full min-h-screen h-fit",
           "flex flex-col gap-y-10",
           "px-[20%] py-10"
         )}

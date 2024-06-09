@@ -45,7 +45,7 @@ const SectionActivities = () => {
         dapibus porttitor. Etiam malesuada est orci, sodales iaculis dui sodales
         id. Interdum et malesuada fames ac ante ipsum primis in faucibus
       </p>
-      <div className={twMerge("flex flex-row gap-x-3 h-96")}>
+      <div className={twMerge("flex flex-row gap-x-3 min-h-96 h-fit")}>
         {ACTIVITIES.map((activity, index) => (
           <div className={twMerge("flex-1")} key={index}>
             <CardImage {...activity} imageHeight="h-[12rem]" />

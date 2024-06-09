@@ -13,18 +13,28 @@ interface Props {
 
 const Carousel: React.FC<Props> = ({ items }) => {
   const [index, setIndex] = useState(1);
-  const [maxHeight, setMaxHeight] = useState(0);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [height, setHeight] = useState(300);
 
   useEffect(() => {
-    if (itemRefs.current) {
-      const heights = itemRefs.current.map((ref) => ref?.offsetHeight || 0);
-      setMaxHeight(Math.max(...heights));
-    }
-  }, [items]);
+    const interval = setInterval(() => {
+      if (itemRefs.current[0] && itemRefs.current[0].clientHeight) {
+        const heights = itemRefs.current.map(
+          //@ts-ignore
+          (el) => el?.clientHeight || itemRefs.current[0].clientHeight
+        );
+        setHeight(Math.max(...heights));
+      }
+    }, 200);
+
+    return () => clearInterval(interval);
+  });
 
   return (
-    <div className={twMerge(`w-full h-[${maxHeight}px]`, "relative")}>
+    <div
+      className={twMerge(`w-full`, "relative")}
+      style={{ height: `${height}px` }}
+    >
       <button
         className={twMerge("absolute", "left-0 top-[50%] z-[20]")}
         onClick={() => {
@@ -48,13 +58,12 @@ const Carousel: React.FC<Props> = ({ items }) => {
             //@ts-ignore
             ref={(el) => (itemRefs.current[idx] = el)}
             className={twMerge(
-              "w-full h-fit",
-              "absolute",
+              "absolute top-[50%] w-fit h-fit",
               "flex items-center justify-center",
               "transition-all duration-500 ease-in-out",
-              "translate-x-[-100%]",
               `translate-x-[${(idx - index) * 100}%]`,
-              index !== idx && "translate-y-[10%] scale-75"
+              index !== idx && "-translate-y-[30%] scale-75",
+              index === idx && "-translate-y-1/2"
             )}
           >
             {item}
