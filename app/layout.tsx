@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={twMerge(lexend.className, "flex flex-col")}>
+      <body
+        className={twMerge(lexend.className, "flex flex-col overflow-x-hidden")}
+      >
         {children}
       </body>
     </html>
