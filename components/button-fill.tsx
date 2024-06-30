@@ -17,9 +17,10 @@ interface Props {
   text: string;
   border?: boolean;
   fullWidth?: boolean;
+  onClick?: () => void;
 }
 
-const ButtonFill: React.FC<Props> = ({ text, border, fullWidth }) => {
+const ButtonFill: React.FC<Props> = ({ text, border, fullWidth, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <button
@@ -32,6 +33,7 @@ const ButtonFill: React.FC<Props> = ({ text, border, fullWidth }) => {
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
       <motion.div
         variants={HoverVariant}
