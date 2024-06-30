@@ -1,4 +1,5 @@
 import CardImage from "@/components/card-image";
+import Carousel from "@/components/carousel";
 import TitleSection from "@/components/home/title-section";
 import { twMerge } from "tailwind-merge";
 
@@ -14,21 +15,21 @@ const ACTIVITIES: Activity[] = [
     title: "Renungan Harian",
     subtitle: "Harian",
     description:
-      "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "Renungan Harian dari Alkitab dan sharing antar Scholars yang berjalan setiap hari.",
     src: "/home/background.jpg",
   },
   {
     title: "Pendalaman Iman",
     subtitle: "Mingguan",
     description:
-      "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "Acara Mingguan dengan pendalaman Iman dan/atau berdoa Bersama.",
     src: "/home/background.jpg",
   },
   {
     title: "Webinar",
     subtitle: "Bulanan",
     description:
-      "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "Setiap bulan Scholars mengadakan Webinar dan mengundang Narasumber.",
     src: "/home/background.jpg",
   },
 ];
@@ -45,12 +46,24 @@ const SectionActivities = () => {
         dapibus porttitor. Etiam malesuada est orci, sodales iaculis dui sodales
         id. Interdum et malesuada fames ac ante ipsum primis in faucibus
       </p>
-      <div className={twMerge("flex flex-row gap-x-3 min-h-96 h-fit")}>
-        {ACTIVITIES.map((activity, index) => (
-          <div className={twMerge("flex-1")} key={index}>
-            <CardImage {...activity} imageHeight="h-[12rem]" />
-          </div>
-        ))}
+      <div className="min-h-96 h-fit">
+        <div className={twMerge("flex flex-row gap-x-3 max-lg:hidden")}>
+          {ACTIVITIES.map((activity, index) => (
+            <div className={twMerge("flex-1")} key={index}>
+              <CardImage {...activity} imageHeight="h-[12rem]" />
+            </div>
+          ))}
+        </div>
+        <div className="lg:hidden">
+          <Carousel
+            isTranslateY={false}
+            items={ACTIVITIES.map((activity, index) => (
+              <div className={twMerge("flex-1")} key={index}>
+                <CardImage {...activity} imageHeight="h-[12rem]" />
+              </div>
+            ))}
+          />
+        </div>
       </div>
     </section>
   );

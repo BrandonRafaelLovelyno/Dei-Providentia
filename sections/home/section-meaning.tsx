@@ -9,6 +9,7 @@ const SectionMeaning = () => {
         <span className="text-blue-600 font-semibold">
           &quot;Dei Providentia&quot; berarti Tuhan memberikan semuanya.
         </span>
+        <span> </span>
         Istilah ini menekankan bahwa segala sesuatu yang kita alami dan miliki
         adalah providence dari Tuhan, bukan sekedar kebetulan. Oleh karena itu,
         &quot;Dei Providentia&quot; mengajarkan kita untuk selalu berhati besar

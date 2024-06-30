@@ -1,4 +1,5 @@
 import CardImage from "@/components/card-image";
+import Carousel from "@/components/carousel";
 import TitleSection from "@/components/home/title-section";
 import { twMerge } from "tailwind-merge";
 
@@ -13,19 +14,19 @@ const MISSIONS: Mission[] = [
     title: "Hidup dalam iman",
     description:
       " hidup di dalam iman melalui doa, pendalaman Liturgi Gereja, renungan harian, pendalaman Alkitab bersama mingguan, ketertarikan membaca riwayat para kudus dan para Bapak Gereja.",
-    src: "/home/background.jpg",
+    src: "/home/mission/hidup-dalam-iman.jpg",
   },
   {
     title: "Belajar memetik pengalaman",
     description:
       "baik dari pembimbing kuliah, dosen, teman, mentor,  para pembicara  webinar/seminar, mencermati dan mempelajari kepemimpinan dan berinspirasi dari mereka",
-    src: "/home/background.jpg",
+    src: "/home/mission/belajar-dari-pengalaman.jpg",
   },
   {
     title: "Bekerja di dalam team dan komunitas seiman",
     description:
       " sebagai tempat aktualisasi diri serta menjadi peka terhadap kebutuhan masyarakat sekitar",
-    src: "/home/background.jpg",
+    src: "/home/mission/bekerja-di-dalam-tim.jpg",
   },
 ];
 
@@ -48,7 +49,7 @@ const SectionMission = () => {
         </p>
         <div
           className={twMerge(
-            "flex lg:flex-row lg:gap-x-3 flex-col max-lg:gap-y-3 h-fit min-h-[26rem]"
+            "flex lg:flex-row lg:gap-x-3 max-lg:gap-y-3 h-fit min-h-[26rem] max-lg:hidden"
           )}
         >
           {MISSIONS.map((mission, index) => (
@@ -56,6 +57,16 @@ const SectionMission = () => {
               <CardImage {...mission} imageHeight="h-[13rem]" />
             </div>
           ))}
+        </div>
+        <div className={twMerge("w-full lg:hidden")}>
+          <Carousel
+            isTranslateY={false}
+            items={MISSIONS.map((mission, index) => (
+              <div className={twMerge("flex-1")} key={index}>
+                <CardImage {...mission} imageHeight="h-[13rem]" />
+              </div>
+            ))}
+          />
         </div>
       </div>
     </section>
