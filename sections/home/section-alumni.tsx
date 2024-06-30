@@ -22,7 +22,7 @@ const TESTIMONIALS: Testimonial[] = [
     name: "Redempta Ronauli Sri Rukmini Napitupulu",
     prodi: "S1 Ilmu Komunikasi",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lotem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lotem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lotem ipsum dolor sit amet, consectetur adipiscing elit.",
     src: "/home/background.jpg",
   },
 ];

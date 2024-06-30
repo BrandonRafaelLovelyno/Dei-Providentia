@@ -11,8 +11,8 @@ const ViewAlumni: React.FC<Props> = ({ testimonial }) => {
     <div
       className={twMerge(
         "w-full h-fit",
-        "flex flex-row justify-center gap-x-5",
-        "py-5",
+        "flex lg:flex-row flex-col items-center justify-center lg:gap-x-10",
+        "py-5 px-5",
         "rounded-lg",
         "bg-blue-600"
       )}
@@ -32,12 +32,19 @@ const ViewAlumni: React.FC<Props> = ({ testimonial }) => {
           className={twMerge("rounded-full")}
         />
       </div>
-      <div className={twMerge("w-1/2", "flex flex-col gap-y-3", "pt-5")}>
+      <div
+        className={twMerge("lg:w-1/2 w-full", "flex flex-col gap-y-3", "pt-5")}
+      >
         <div className={twMerge("flex flex-col")}>
-          <h3 className={twMerge("text-lg font-bold", "text-white")}>
+          <h3
+            className={twMerge(
+              "text-lg max-lg:text-center font-bold",
+              "text-white"
+            )}
+          >
             {testimonial.name}
           </h3>
-          <h4 className={twMerge("text-md text-white ")}>
+          <h4 className={twMerge("text-md max-lg:text-center text-white ")}>
             {testimonial.prodi}
           </h4>
         </div>
