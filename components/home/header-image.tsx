@@ -2,7 +2,11 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import ButtonFill from "../button-fill";
 
-const HeaderImage = () => {
+interface Props {
+  onRegistration: () => void;
+}
+
+const HeaderImage: React.FC<Props> = ({ onRegistration }) => {
   return (
     <div
       className={twMerge(
@@ -29,12 +33,16 @@ const HeaderImage = () => {
         />
       </>
       <div
-        className={twMerge("z-10", "flex flex-col gap-y-10", "pl-[20%] mt-20")}
+        className={twMerge(
+          "z-10",
+          "flex flex-col gap-y-10",
+          "lg:pl-[20%] max-lg:px-5 mt-20"
+        )}
       >
         <div className={twMerge("flex flex-col gap-y-2 text-white")}>
           <h1 className="text-4xl font-bold">Dei Providentia</h1>
           <h2 className="text-xl">Scholarship</h2>
-          <p className={twMerge("w-[50%]", "font-thin")}>
+          <p className={twMerge("lg:w-[50%] w-full", "font-thin")}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget
             tempus ante. Aliquam sit amet vehicula ante, id aliquam dolor.
             Aenean pellentesque fringilla leo vel efficitur. In hac habitasse
@@ -42,7 +50,7 @@ const HeaderImage = () => {
             nulla dapibus porttitor.
           </p>
         </div>
-        <ButtonFill text="DAFTAR DI SINI" border />
+        <ButtonFill onClick={onRegistration} text="DAFTAR DI SINI" border />
       </div>
     </div>
   );
