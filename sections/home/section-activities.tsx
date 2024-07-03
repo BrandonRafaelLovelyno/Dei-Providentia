@@ -16,21 +16,33 @@ const ACTIVITIES: Activity[] = [
     subtitle: "Harian",
     description:
       "Renungan Harian dari Alkitab dan sharing antar Scholars yang berjalan setiap hari.",
-    src: "/home/background.jpg",
+    src: "/home/activities/renungan-harian.jpg",
   },
   {
     title: "Pendalaman Iman",
     subtitle: "Mingguan",
     description:
       "Acara Mingguan dengan pendalaman Iman dan/atau berdoa Bersama.",
-    src: "/home/background.jpg",
+    src: "/home/activities/pendalaman-iman.jpg",
   },
   {
     title: "Webinar",
     subtitle: "Bulanan",
     description:
       "Setiap bulan Scholars mengadakan Webinar dan mengundang Narasumber.",
-    src: "/home/background.jpg",
+    src: "/home/activities/webinar.jpg",
+  },
+  {
+    title: "Mentoring",
+    description:
+      "Setiap Scholar akan mendapatkan Mentor yang akan membimbingnya dalam berbagai hal.",
+    src: "/home/activities/mentoring.jpg",
+  },
+  {
+    title: "Kunjungan Scholars",
+    description:
+      "Kunjungan oleh Dei Providentia Foundation ke Universitas Scholars.",
+    src: "/home/activities/kunjungan-scholars.jpg",
   },
 ];
 
@@ -39,20 +51,32 @@ const SectionActivities = () => {
     <section className={twMerge("flex flex-col gap-y-5")}>
       <TitleSection title="Kegiatan Scholars" />
       <p className={twMerge("font-normal")}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget tempus
-        ante. Aliquam sit amet vehicula ante, id aliquam dolor. Aenean
-        pellentesque fringilla leo vel efficitur. In hac habitasse platea
-        dictumst. Vivamus vel pharetra nulla. In sit amet nisl vitae nulla
-        dapibus porttitor. Etiam malesuada est orci, sodales iaculis dui sodales
-        id. Interdum et malesuada fames ac ante ipsum primis in faucibus
+        Kegiatan Scholars diadakan untuk menanamkan nilai-nilai Dei Providentia,
+        mengembangkan diri Scholars, serta memperluas jejaring Scholars.
+        Terdapat beberapa kegiatan rutin serta nonrutin antara lain:
       </p>
-      <div className="min-h-96 h-fit">
-        <div className={twMerge("flex flex-row gap-x-3 max-lg:hidden")}>
-          {ACTIVITIES.map((activity, index) => (
-            <div className={twMerge("flex-1")} key={index}>
-              <CardImage {...activity} imageHeight="h-[12rem]" />
-            </div>
-          ))}
+      <div className="h-fit">
+        <div className={twMerge("flex flex-col gap-y-5 max-lg:hidden")}>
+          <div className={twMerge("flex flex-row gap-x-3")}>
+            {ACTIVITIES.map((activity, index) => {
+              if (index > 2) return null;
+              return (
+                <div className={twMerge("flex-1")} key={index}>
+                  <CardImage {...activity} imageHeight="h-[12rem]" />
+                </div>
+              );
+            })}
+          </div>
+          <div className={twMerge("flex flex-row gap-x-3")}>
+            {ACTIVITIES.map((activity, index) => {
+              if (index <= 2) return null;
+              return (
+                <div className={twMerge("flex-1")} key={index}>
+                  <CardImage {...activity} imageHeight="h-[12rem]" />
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className="lg:hidden">
           <Carousel
