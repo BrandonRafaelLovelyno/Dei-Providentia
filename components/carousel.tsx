@@ -14,8 +14,8 @@ interface Props {
 
 const styleTranslateX = (index: number, currentIndex: number) => {
   if (index === currentIndex) return "translate-x-[0]";
-  if (index < currentIndex) return "translate-x-[105%]";
-  return "translate-x-[-105%]";
+  if (index < currentIndex) return "-translate-x-[105%]";
+  return "translate-x-[105%]";
 };
 
 const styleTranslateY = (index: number, currentIndex: number) => {
@@ -50,8 +50,8 @@ const Carousel: React.FC<Props> = ({ items, isTranslateY = true }) => {
       <button
         className={twMerge("absolute", "left-0 top-[50%] z-[20]", "text-white")}
         onClick={() => {
-          if (index === items.length - 1) return;
-          setIndex((prev) => prev + 1);
+          if (index == 0) return;
+          setIndex((prev) => prev - 1);
         }}
       >
         <MdKeyboardDoubleArrowLeft size={40} />
@@ -63,8 +63,8 @@ const Carousel: React.FC<Props> = ({ items, isTranslateY = true }) => {
           "text-white"
         )}
         onClick={() => {
-          if (index == 0) return;
-          setIndex((prev) => prev - 1);
+          if (index === items.length - 1) return;
+          setIndex((prev) => prev + 1);
         }}
       >
         <MdKeyboardDoubleArrowRight size={40} />
@@ -76,7 +76,7 @@ const Carousel: React.FC<Props> = ({ items, isTranslateY = true }) => {
             //@ts-ignore
             ref={(el) => (itemRefs.current[idx] = el)}
             className={twMerge(
-              "absolute top-[50%] w-fit h-fit",
+              "absolute top-[50%] w-full h-fit",
               "flex items-center justify-center",
               "transition-all duration-[800ms] ease-in-out",
               styleTranslateX(idx, index),
