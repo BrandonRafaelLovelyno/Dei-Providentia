@@ -39,16 +39,23 @@ const HeaderImage: React.FC<Props> = ({ onRegistration }) => {
           "lg:pl-[20%] max-lg:px-5 mt-20"
         )}
       >
-        <div className={twMerge("flex flex-col gap-y-2 text-white")}>
-          <h1 className="text-4xl font-bold">Dei Providentia</h1>
-          <h2 className="text-xl">Scholarship</h2>
-          <p className={twMerge("lg:w-[50%] w-full", "font-thin")}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget
-            tempus ante. Aliquam sit amet vehicula ante, id aliquam dolor.
-            Aenean pellentesque fringilla leo vel efficitur. In hac habitasse
-            platea dictumst. Vivamus vel pharetra nulla. In sit amet nisl vitae
-            nulla dapibus porttitor.
-          </p>
+        <div className={twMerge("flex flex-col gap-y-8 text-white")}>
+          <div className="flex flex-col gap-y-2">
+            <h1 className="text-4xl lg:text-6xl font-bold">Dei Providentia</h1>
+            <h2 className="text-xl lg:text-5xl">Scholarship</h2>
+          </div>
+          <div className="flex flex-col gap-y-2">
+            <p
+              className={twMerge(
+                "lg:w-[50%] w-full",
+                "font-light",
+                "lg:text-2xl text-lg"
+              )}
+            >
+              Harnessing the power of Catholic faith-based education to develop
+              leaders.
+            </p>
+          </div>
         </div>
         <ButtonFill onClick={onRegistration} text="DAFTAR DI SINI" border />
       </div>
