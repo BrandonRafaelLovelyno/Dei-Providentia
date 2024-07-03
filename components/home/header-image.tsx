@@ -36,7 +36,7 @@ const HeaderImage: React.FC<Props> = ({ onRegistration }) => {
         className={twMerge(
           "z-10",
           "flex flex-col gap-y-10",
-          "lg:pl-[20%] max-lg:px-5 mt-20"
+          "lg:pl-[20%] max-lg:pl-8 mt-20"
         )}
       >
         <div className={twMerge("flex flex-col gap-y-8 text-white")}>
