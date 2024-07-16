@@ -48,7 +48,9 @@ const ViewAlumni: React.FC<Props> = ({ testimonial }) => {
             {testimonial.prodi}
           </h4>
         </div>
-        <p className={twMerge("text-sm", "text-white")}>{testimonial.quote}</p>
+        <p className={twMerge("text-md", "leading-5", "text-white")}>
+          {testimonial.quote}
+        </p>
       </div>
     </div>
   );
