@@ -44,6 +44,12 @@ const ACTIVITIES: Activity[] = [
       "Kunjungan oleh Dei Providentia Foundation ke Universitas Scholars.",
     src: "/home/activities/kunjungan-scholars.jpg",
   },
+  {
+    title: "Training",
+    description:
+      "Training yang diadakan oleh Dei Providentia Foundation untuk meningkatkan kemampuan Scholars dalam berbagai aspek.",
+    src: "/home/activities/training.jpg",
+  },
 ];
 
 const SectionActivities = () => {
