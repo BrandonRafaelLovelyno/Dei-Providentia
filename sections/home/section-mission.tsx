@@ -23,7 +23,7 @@ const MISSIONS: Mission[] = [
     src: "/home/mission/belajar-dari-pengalaman.jpg",
   },
   {
-    title: "Bekerja di dalam team dan komunitas seiman",
+    title: "Bekerja di dalam team dan komunitas",
     description:
       " sebagai tempat aktualisasi diri serta menjadi peka terhadap kebutuhan masyarakat sekitar",
     src: "/home/mission/bekerja-di-dalam-tim.jpg",

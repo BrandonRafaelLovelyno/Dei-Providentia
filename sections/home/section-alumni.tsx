@@ -12,18 +12,18 @@ export interface Testimonial {
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    name: "Nuresya Larasayu Octavia",
+    name: "Fransina Furak Junior, S.Ak",
     prodi: "S1 Akuntansi",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lotem ipsum dolor sit amet, consectetur adipiscing elit.",
-    src: "/home/background.jpg",
+      "Beasiswa Dei Providentia adalah berkat yang besar dari Tuhan. Keistimewaan yayasan ini adalah yayasan ini sangat peduli dengan kesehatan rohani dan mental para scholarsnya.",
+    src: "/home/alumni/fransina.jpg",
   },
   {
-    name: "Redempta Ronauli Sri Rukmini Napitupulu",
+    name: "Benedict Charlie Davin Alber, S.Pd",
     prodi: "S1 Ilmu Komunikasi",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lotem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lotem ipsum dolor sit amet, consectetur adipiscing elit.",
-    src: "/home/background.jpg",
+      "Berbagai kegiatan Dei Providentia sungguh mengasah pengetahuan akademis, keterampilan soft skill, dan iman Kristiani saya.",
+    src: "/home/alumni/benedict.jpg",
   },
 ];
 
@@ -31,6 +31,11 @@ const SectionAlumni = () => {
   return (
     <section className={twMerge("w-full", "flex flex-col gap-y-5")}>
       <TitleSection title="Alumni Kami" />
+      <p className={twMerge("font-normal")}>
+        Dei Providentia telah membantu menyediakan pendidikan untuk beberapa
+        mahasiswa pada universitas mitra. Berikut adalah beberapa testimonial
+        dari alumni Dei Providentia:
+      </p>
       <Carousel
         items={[
           ...TESTIMONIALS.map((testimonial, idx) => (
