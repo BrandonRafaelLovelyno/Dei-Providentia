@@ -25,6 +25,13 @@ const TESTIMONIALS: Testimonial[] = [
       "Berbagai kegiatan Dei Providentia sungguh mengasah pengetahuan akademis, keterampilan soft skill, dan iman Kristiani saya.",
     src: "/home/alumni/benedict.jpg",
   },
+  {
+    name: "Brigitta Amanda Maharani",
+    prodi: "S1 Farmasi",
+    quote:
+      "Dei Providentia melatih saya untuk menjadi seorang pemimpin yang percaya diri, bertanggung jawab, dapat membuat keputusan, pantang menyerah, menghargai perbedaan, serta taat dan takut akan Tuhan melalui berbagai kegiatan yang diadakan.",
+    src: "/home/alumni/brigitta.jpg",
+  },
 ];
 
 const SectionAlumni = () => {
