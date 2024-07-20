@@ -12,9 +12,10 @@ const SectionMeaning = () => {
         <span> </span>
         Istilah ini menekankan bahwa segala sesuatu yang kita alami dan miliki
         adalah providence dari Tuhan, bukan sekedar kebetulan. Oleh karena itu,
-        &quot;Dei Providentia&quot; mengajarkan kita untuk selalu berhati besar
-        dalam berbagi, menghargai setiap pemberian, dan menyadari bahwa semua
-        ini adalah bagian dari Penyelenggaraan Ilahi yang Maha Kuasa.
+        <span className="text-blue-600 font-semibold"> Dei Providentia </span>
+        mengajarkan kita untuk selalu berhati besar dalam berbagi, menghargai
+        setiap pemberian, dan menyadari bahwa semua ini adalah bagian dari
+        Penyelenggaraan Ilahi yang Maha Kuasa.
       </p>
     </section>
   );
