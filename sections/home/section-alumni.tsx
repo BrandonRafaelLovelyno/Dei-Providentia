@@ -8,6 +8,7 @@ export interface Testimonial {
   prodi: string;
   quote: string;
   src: string;
+  tahun: number;
 }
 
 const TESTIMONIALS: Testimonial[] = [
@@ -17,13 +18,15 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "Beasiswa Dei Providentia adalah berkat yang besar dari Tuhan. Keistimewaan yayasan ini adalah yayasan ini sangat peduli dengan kesehatan rohani dan mental para scholarsnya.",
     src: "/home/alumni/fransina.jpg",
+    tahun: 2022,
   },
   {
-    name: "Benedict Charlie Davin Alber, S.Pd",
-    prodi: "S1 Ilmu Komunikasi",
+    name: "Bernadict Charlie Davin Albert, S.Pd",
+    prodi: "S1 Bimbingan & Konseling",
     quote:
       "Berbagai kegiatan Dei Providentia sungguh mengasah pengetahuan akademis, keterampilan soft skill, dan iman Kristiani saya.",
     src: "/home/alumni/benedict.jpg",
+    tahun: 2024,
   },
   {
     name: "Brigitta Amanda Maharani",
@@ -31,6 +34,7 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "Dei Providentia melatih saya untuk menjadi seorang pemimpin yang percaya diri, bertanggung jawab, dapat membuat keputusan, pantang menyerah, menghargai perbedaan, serta taat dan takut akan Tuhan melalui berbagai kegiatan yang diadakan.",
     src: "/home/alumni/brigitta.jpg",
+    tahun: 2024,
   },
 ];
 
