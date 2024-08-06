@@ -6,13 +6,13 @@ const SectionMeaning = () => {
     <section className="flex flex-col gap-y-5">
       <TitleSection title="Makna Dei Providentia" />
       <p className={twMerge("font-normal")}>
-        <span className="text-blue-600 font-semibold">
+        <span className="text-blue-600 font-bold">
           &quot;Dei Providentia&quot; berarti Tuhan memberikan semuanya.
         </span>
         <span> </span>
         Istilah ini menekankan bahwa segala sesuatu yang kita alami dan miliki
         adalah providence dari Tuhan, bukan sekedar kebetulan. Oleh karena itu,
-        <span className="text-blue-600 font-semibold"> Dei Providentia </span>
+        <span className="text-blue-600 font-bold"> Dei Providentia </span>
         mengajarkan kita untuk selalu berhati besar dalam berbagi, menghargai
         setiap pemberian, dan menyadari bahwa semua ini adalah bagian dari
         Penyelenggaraan Ilahi yang Maha Kuasa.
